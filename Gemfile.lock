@@ -116,6 +116,9 @@ GEM
       listen (>= 0.4.1)
       mail (>= 2.0.3)
       maildir (>= 0.5.0)
+    mailman-rails (0.0.3)
+      mailman
+      rails
     mime-types (1.23)
     mini_portile (0.5.1)
     multi_json (1.7.7)
@@ -230,7 +233,7 @@ DEPENDENCIES
   figaro (>= 0.6.3)
   jquery-rails
   launchy (>= 2.2.0)
-  mailman
+  mailman-rails
   pg
   quiet_assets (>= 1.0.2)
   rails (= 3.2.13)

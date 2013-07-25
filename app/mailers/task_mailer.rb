@@ -17,6 +17,8 @@ class TaskMailer < ActionMailer::Base
     end
 
     def receive(email)
+        puts email
+        logger.debug email.from.first
         member = Member.find_by_email(email.from.first)
         return if member.nil?
 

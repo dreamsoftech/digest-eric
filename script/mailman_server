@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require "rubygems"
+require "bundler/setup"
+require "mailman"
+
+ENV["RAILS_ENV"] ||= "test"
+require File.dirname(__FILE__) + "/../config/environment"
+
+Mailman.config.ignore_stdin = true
+# Mailman.config.logger = Logger.new File.expand_path("../../log/mailman_#{Rails.env}.log", __FILE__)
+
+Mailman::Application.run do
+  default do
+    logger.debug "-------------------------------------------"
+  end
+end
