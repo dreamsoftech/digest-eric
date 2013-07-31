@@ -16,9 +16,13 @@ class TaskMailer < ActionMailer::Base
         mail(to: member.email, subject: "Your Week Log")
     end
 
+    def resend(email)
+       mail(to: email.from.first, subject: "Thanks", body: "Thanks for your response").deliver
+    end
+    
     def receive(email)
         puts email
-        logger.debug email.from.first
+
         member = Member.find_by_email(email.from.first)
         return if member.nil?
 
