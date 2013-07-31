@@ -14,7 +14,7 @@
   <%= f.input :password, :required => true %>
   <%= f.input :password_confirmation, :required => true %>
   <% if @user.stripe_token %>
-    <p>Credit card acceptance is pending.</p>
+    <p>Credit card acceptance is pending. <%= @user.stripe_token %></p>
   <% else %>
     <div class="field">
       <%= label_tag :card_number, "Credit Card Number" %>
@@ -33,6 +33,6 @@
       <%= f.input :coupon, :label => 'Promotional Coupon (if any)' %>
     </div>
   <% end %>
-  <%= f.hidden_field :stripe_token %>
+  <%= f.text_field :stripe_token %>
   <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
 <% end %>

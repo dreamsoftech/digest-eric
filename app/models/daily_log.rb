@@ -4,6 +4,6 @@ class DailyLog < ActiveRecord::Base
 
   Mailman::Rails.receive do
   	logger.debug "--------------------------------------------------"
-  	logger.debug message.from.first
+  	# logger.debug message.from.first
   end
 end
