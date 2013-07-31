@@ -4,7 +4,8 @@ class DailyLog < ActiveRecord::Base
 
   Mailman::Rails.receive do
   	default do
-  		TaskMailer.resend(message)
+  		TaskMailer.receive(message)
+  		puts message.inspect
   	end
   end
 end
