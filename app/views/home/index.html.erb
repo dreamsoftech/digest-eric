@@ -1,12 +1,13 @@
 <div id="welcome" class="hero-unit span7">
   <h1>Digest Team Site</h1>
-  <h3>Learn to build a successful subscription site.</h3>
+  <h3>This reminds of members every work day to submit their work-diary</h3>
+  <h3>And sends the weekly email what they did on Friday 4:00 PM.</h3>
 </div>
 <div class="row span8 plans">
   <div class="span2 well">
     <div class="plan"><h2>Silver</h2></div>
     <ul class="unstyled">
-      <li>One lesson a month</li>
+      <li>100 members</li>
     </ul>
     <h3>$1/month</h3>
     <%= link_to 'Subscribe', new_user_registration_path(:plan => 'silver'), :class => 'btn btn-primary' %> 
@@ -14,7 +15,7 @@
   <div class="span2 well featured">
     <div class="plan featured-plan"><h2>Gold</h2></div>
     <ul class="unstyled">
-      <li>Ten lessons a month</li>
+      <li>Unlimited members</li>
     </ul>
     <h3>$2/month</h3>
     <%= link_to 'Subscribe', new_user_registration_path(:plan => 'gold'), :class => 'btn btn-primary' %> 
@@ -22,7 +23,8 @@
   <div class="span2 well">
     <div class="plan"><h2>Platinum</h2></div>
     <ul class="unstyled">
-      <li>Thirty lessons a month</li>
+      <li>Unlimited members</li>
+      <li>Phone notification</li>
     </ul>
     <h3>$3/month</h3>
     <%= link_to 'Subscribe', new_user_registration_path(:plan => 'platinum'), :class => 'btn btn-primary' %> 
