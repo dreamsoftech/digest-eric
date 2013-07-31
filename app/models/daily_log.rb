@@ -3,6 +3,8 @@ class DailyLog < ActiveRecord::Base
   belongs_to :member
 
   Mailman::Rails.receive do
-  	TaskMailer.resend(message)
+  	default do
+  		TaskMailer.resend(message)
+  	end
   end
 end
